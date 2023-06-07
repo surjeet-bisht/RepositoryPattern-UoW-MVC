@@ -11,7 +11,7 @@ Repository pattern implemented with unit of work in ASP.NET MVC.
   1. ASP.NET 4..8
   2. Entity Framework 5.0
   3. Ninject for dependency injection
-  4. Auto Mapper for matting domain to business entities
+  4. Auto Mapper for mapping domain to business entities
   
   
 ![image](https://github.com/surjeet-bisht/RepositoryPattern-UoW-MVC/assets/126648655/de1ca81c-aff7-4a14-b0da-a6f067d0dd22)
