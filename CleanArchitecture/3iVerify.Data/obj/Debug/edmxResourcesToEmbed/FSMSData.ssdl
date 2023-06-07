@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HACCPNowSQLDevModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="ManufacturerID" />
+    </Key>
+    <Property Name="ManufacturerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GlobalCompanyID" Type="int" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="MSiteName" Type="varchar" MaxLength="75" />
+    <Property Name="MAddress1" Type="varchar" MaxLength="50" />
+    <Property Name="MAddress2" Type="varchar" MaxLength="50" />
+    <Property Name="MAddress3" Type="varchar" MaxLength="50" />
+    <Property Name="MAddress4" Type="varchar" MaxLength="50" />
+    <Property Name="MAddress5" Type="varchar" MaxLength="50" />
+    <Property Name="MCountryID" Type="int" />
+    <Property Name="MPostCode" Type="varchar" MaxLength="20" />
+    <Property Name="MTel" Type="varchar" MaxLength="20" />
+    <Property Name="MFax" Type="varchar" MaxLength="20" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="MName" Type="varchar" MaxLength="100" />
+    <Property Name="MContactEmail" Type="varchar" MaxLength="200" />
+    <Property Name="IsChanged" Type="bit" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="RegistrationNo" Type="varchar" MaxLength="200" />
+    <Property Name="MSiteCode" Type="varchar" MaxLength="50" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="RawMaterial">
+    <Key>
+      <PropertyRef Name="RawMaterialID" />
+    </Key>
+    <Property Name="RawMaterialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="RawMaterial" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Variety" Type="nvarchar" MaxLength="50" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" />
+    <Property Name="PackSize" Type="nvarchar" MaxLength="150" />
+    <Property Name="Packaging" Type="nvarchar" MaxLength="150" />
+    <Property Name="LegalName" Type="ntext" />
+    <Property Name="RawMaterialDescription" Type="ntext" />
+    <Property Name="IngrDeclaration" Type="ntext" />
+    <Property Name="RawMaterialOrganicDescription" Type="ntext" />
+    <Property Name="RawMaterialShelfLifeID" Type="int" />
+    <Property Name="RawMaterialSAPCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CommercialCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsReadyToEat" Type="bit" />
+    <Property Name="IsBulkProduct" Type="bit" />
+    <Property Name="SupplierProductCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierName" Type="nvarchar" MaxLength="150" />
+    <Property Name="SupplierFDARegNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateCodeFormat" Type="ntext" />
+    <Property Name="BatchLotCodeDetail" Type="ntext" />
+    <Property Name="ShelfLifeDesignation" Type="varchar" MaxLength="50" />
+    <Property Name="ShelfLifeUnopened" Type="varchar" MaxLength="200" />
+    <Property Name="ShelfLifeOpened" Type="varchar" MaxLength="200" />
+    <Property Name="DistributionChain" Type="ntext" />
+    <Property Name="ManufacturerName" Type="nvarchar" MaxLength="150" />
+    <Property Name="ManufacturerFDARegNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="FSVPExemptYesNoOnlyListID" Type="int" />
+    <Property Name="FSVPInPlaceYesNoListID" Type="int" />
+    <Property Name="FSVPDocumentName" Type="nvarchar" MaxLength="150" />
+    <Property Name="CountryOfOrigin" Type="ntext" />
+    <Property Name="CountryOfOriginID" Type="int" />
+    <Property Name="CountryOfTransit" Type="ntext" />
+    <Property Name="CountryOfTransitID" Type="int" />
+    <Property Name="CountryOfManufacture" Type="ntext" />
+    <Property Name="CountryOfManufactureID" Type="int" />
+    <Property Name="Approved" Type="bit" />
+    <Property Name="ApprovedDate" Type="datetime" />
+    <Property Name="ApprovedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApprovedUserID" Type="int" />
+    <Property Name="ApprovalBasis" Type="nvarchar" MaxLength="200" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="Comments" Type="ntext" />
+    <Property Name="ImportID" Type="varchar" MaxLength="50" />
+    <Property Name="GTIN" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="DocumentPath" Type="varchar" MaxLength="500" />
+    <Property Name="RawMaterialDocument" Type="image" />
+    <Property Name="InDevelopment" Type="bit" />
+    <Property Name="RawMaterialURL" Type="varchar" MaxLength="500" />
+    <Property Name="ServingsPerContainer" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServingSize" Type="nvarchar" MaxLength="50" />
+    <Property Name="FSVPDocumentFileNameID" Type="int" />
+    <Property Name="IsGlobal" Type="bit" />
+    <Property Name="KBFoodSubCategoryID" Type="int" />
+    <Property Name="RawMaterialTypeID" Type="int" />
+    <Property Name="IsWIP" Type="bit" />
+    <Property Name="IsPackaging" Type="bit" />
+    <Property Name="MethodOfProduction" Type="nvarchar" MaxLength="1000" />
+    <Property Name="MaterialUnitTypeID" Type="int" />
+    <Property Name="SpecificGravity" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="GS1FoodSubCategoryID" Type="int" />
+    <Property Name="RawMaterialRiskCategoryID" Type="int" />
+    <Property Name="MaterialUnitNetWtKg" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PlasticTaxGramsPerKg" Type="numeric" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="RawMaterialManufacturer">
+    <Key>
+      <PropertyRef Name="RawMaterialManufacturerID" />
+    </Key>
+    <Property Name="RawMaterialManufacturerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RawMaterialID" Type="int" />
+    <Property Name="ManufacturerID" Type="int" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="IsSelectedForSupplier" Type="bit" />
+    <Property Name="SupplierId" Type="int" />
+    <Property Name="ApprovalStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="RawMaterialSupplier">
+    <Key>
+      <PropertyRef Name="RawMaterialSupplierID" />
+    </Key>
+    <Property Name="RawMaterialSupplierID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RawMaterialID" Type="int" Nullable="false" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="RawMaterial" Type="nvarchar" MaxLength="150" />
+    <Property Name="Variety" Type="nvarchar" MaxLength="50" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" />
+    <Property Name="PackSize" Type="nvarchar" MaxLength="150" />
+    <Property Name="Packaging" Type="ntext" />
+    <Property Name="LegalName" Type="ntext" />
+    <Property Name="RawMaterialDescription" Type="ntext" />
+    <Property Name="IngrDeclaration" Type="ntext" />
+    <Property Name="RawMaterialOrganicDescription" Type="ntext" />
+    <Property Name="RawMaterialShelfLifeID" Type="int" />
+    <Property Name="RawMaterialSAPCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="RawMaterialUnitCost" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="CommercialCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsReadyToEat" Type="bit" />
+    <Property Name="IsBulkProduct" Type="bit" />
+    <Property Name="SupplierProductCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierName" Type="nvarchar" MaxLength="150" />
+    <Property Name="SupplierFDARegNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ManufacturerName" Type="nvarchar" MaxLength="150" />
+    <Property Name="ManufacturerFDARegNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateCodeFormat" Type="ntext" />
+    <Property Name="BatchLotCodeDetail" Type="ntext" />
+    <Property Name="ShelfLifeDesignation" Type="varchar" MaxLength="50" />
+    <Property Name="ShelfLifeUnopened" Type="varchar" MaxLength="200" />
+    <Property Name="ShelfLifeOpened" Type="varchar" MaxLength="200" />
+    <Property Name="DistributionChain" Type="ntext" />
+    <Property Name="FSVPExemptYesNoOnlyListID" Type="int" />
+    <Property Name="FSVPInPlaceYesNoListID" Type="int" />
+    <Property Name="FSVPDocumentName" Type="nvarchar" MaxLength="150" />
+    <Property Name="CountryOfOrigin" Type="ntext" />
+    <Property Name="CountryOfOriginID" Type="int" />
+    <Property Name="CountryOfTransit" Type="ntext" />
+    <Property Name="CountryOfTransitID" Type="int" />
+    <Property Name="CountryOfManufacture" Type="ntext" />
+    <Property Name="CountryOfManufactureID" Type="int" />
+    <Property Name="IsAutoQuestionnaire" Type="bit" />
+    <Property Name="QuestionnaireID" Type="int" />
+    <Property Name="SupplierQuestionnaireID" Type="int" />
+    <Property Name="Approved" Type="bit" />
+    <Property Name="ApprovedDate" Type="datetime" />
+    <Property Name="ApprovedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApprovedUserID" Type="int" />
+    <Property Name="ApprovalBasis" Type="nvarchar" MaxLength="200" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="Comments" Type="ntext" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="DocumentPath" Type="varchar" MaxLength="500" />
+    <Property Name="RawMaterialDocument" Type="image" />
+    <Property Name="ApprovalStatusID" Type="int" />
+    <Property Name="ServingsPerContainer" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServingSize" Type="nvarchar" MaxLength="50" />
+    <Property Name="FSVPDocumentFileNameID" Type="int" />
+    <Property Name="RawMaterialTypeID" Type="int" />
+    <Property Name="GTIN" Type="nvarchar" MaxLength="50" />
+    <Property Name="MethodOfProduction" Type="nvarchar" MaxLength="1000" />
+    <Property Name="SupplierRawMaterialName" Type="nvarchar" MaxLength="150" />
+    <Property Name="LinkedRawMaterialListID" Type="int" />
+    <Property Name="VatRateID" Type="int" />
+    <Property Name="LeadTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="MakeUpInstruction" Type="nvarchar(max)" />
+    <Property Name="MaterialUnitNetWtKg" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PlasticTaxGramsPerKg" Type="numeric" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supplier" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SupplierRef" Type="varchar" MaxLength="50" />
+    <Property Name="SupplierTypeID" Type="int" />
+    <Property Name="SupplierGroupID" Type="int" />
+    <Property Name="SiteName" Type="varchar" MaxLength="100" />
+    <Property Name="AddressOptional" Type="bit" Nullable="false" />
+    <Property Name="Address1" Type="varchar" MaxLength="100" />
+    <Property Name="Address2" Type="varchar" MaxLength="100" />
+    <Property Name="Address3" Type="varchar" MaxLength="100" />
+    <Property Name="Address4" Type="varchar" MaxLength="100" />
+    <Property Name="Address5" Type="varchar" MaxLength="100" />
+    <Property Name="CountryID" Type="int" />
+    <Property Name="PostCode" Type="varchar" MaxLength="20" />
+    <Property Name="Tel" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="WebSiteURL" Type="varchar" MaxLength="250" />
+    <Property Name="MSiteName" Type="varchar" MaxLength="75" />
+    <Property Name="MAddress1" Type="varchar" MaxLength="50" />
+    <Property Name="MAddress2" Type="varchar" MaxLength="50" />
+    <Property Name="MAddress3" Type="varchar" MaxLength="50" />
+    <Property Name="MAddress4" Type="varchar" MaxLength="50" />
+    <Property Name="MAddress5" Type="varchar" MaxLength="50" />
+    <Property Name="MCountryID" Type="int" />
+    <Property Name="MPostCode" Type="varchar" MaxLength="20" />
+    <Property Name="MTel" Type="varchar" MaxLength="50" />
+    <Property Name="MFax" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyProfile" Type="nvarchar(max)" />
+    <Property Name="MainContact" Type="varchar" MaxLength="100" />
+    <Property Name="MainContactJobTitle" Type="varchar" MaxLength="100" />
+    <Property Name="MainContactEmail" Type="varchar" MaxLength="100" />
+    <Property Name="MainContactTel" Type="varchar" MaxLength="50" />
+    <Property Name="TechContact" Type="varchar" MaxLength="100" />
+    <Property Name="TechContactJobTitle" Type="varchar" MaxLength="100" />
+    <Property Name="TechContactEmail" Type="varchar" MaxLength="100" />
+    <Property Name="TechContactTel" Type="varchar" MaxLength="50" />
+    <Property Name="TechContactPassword" Type="varchar" MaxLength="50" />
+    <Property Name="SendChaserEmails" Type="bit" />
+    <Property Name="AccountManagerUserID" Type="int" />
+    <Property Name="EmergencyContactName" Type="varchar" MaxLength="100" />
+    <Property Name="EmergencyContactJobTitle" Type="varchar" MaxLength="100" />
+    <Property Name="EmergencyContactEmail" Type="varchar" MaxLength="100" />
+    <Property Name="EmergencyContactTel" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="ntext" />
+    <Property Name="AutoQuestionnaire" Type="bit" />
+    <Property Name="MonitoringFormID" Type="int" />
+    <Property Name="SedexNo" Type="varchar" MaxLength="200" />
+    <Property Name="IsSMETAAudit" Type="bit" />
+    <Property Name="SMETAPillar" Type="varchar" MaxLength="50" />
+    <Property Name="HealthMarkNo" Type="varchar" MaxLength="200" />
+    <Property Name="LiabilityPerOccurence" Type="varchar" MaxLength="50" />
+    <Property Name="LiabilityPersonalInjury" Type="varchar" MaxLength="50" />
+    <Property Name="LiabilityGeneralAggregate" Type="varchar" MaxLength="50" />
+    <Property Name="LiabilityProductsAggregate" Type="varchar" MaxLength="50" />
+    <Property Name="LiabilityAuto" Type="varchar" MaxLength="50" />
+    <Property Name="LiabilityMotorTruck" Type="varchar" MaxLength="50" />
+    <Property Name="LiabilityExcessUmbrella" Type="varchar" MaxLength="50" />
+    <Property Name="LiabilityEmployers" Type="varchar" MaxLength="50" />
+    <Property Name="StatutoryWorkersCompensation" Type="bit" Nullable="false" />
+    <Property Name="CertifyAdditionalInsured" Type="bit" Nullable="false" />
+    <Property Name="Turnover" Type="varchar" MaxLength="50" />
+    <Property Name="ManufacturingCapacity" Type="varchar" MaxLength="50" />
+    <Property Name="NoFTEmployees" Type="int" />
+    <Property Name="NoPTEmployees" Type="int" />
+    <Property Name="PremisesSize" Type="nvarchar" MaxLength="150" />
+    <Property Name="YearOfConstruction" Type="int" />
+    <Property Name="YearEstablished" Type="int" />
+    <Property Name="NameOfParentCo" Type="varchar" MaxLength="150" />
+    <Property Name="NoProductsManufactured" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoExportShipmentsPerYear" Type="nvarchar" MaxLength="50" />
+    <Property Name="AnnualExportValue" Type="nvarchar" MaxLength="50" />
+    <Property Name="DescriptionOfProducts" Type="nvarchar(max)" />
+    <Property Name="IsGFSICertificatedYesNoOnlyListID" Type="int" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="ImportID" Type="varchar" MaxLength="50" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="IsCCToCommerial" Type="bit" />
+    <Property Name="DunsNo" Type="varchar" MaxLength="50" />
+    <Property Name="IsOptional" Type="bit" />
+    <Property Name="GFBIHashID" Type="varchar" MaxLength="1000" />
+    <Property Name="InDevelopment" Type="bit" />
+    <Property Name="IsGlobal" Type="bit" />
+    <Property Name="ApprovalStatusID" Type="int" />
+    <Property Name="GlobalSupplierID" Type="int" />
+    <Property Name="IsSeparateRemittance" Type="bit" Nullable="false" />
+    <Property Name="RemitAddress1" Type="nvarchar" MaxLength="50" />
+    <Property Name="RemitAddress2" Type="nvarchar" MaxLength="50" />
+    <Property Name="RemitAddress3" Type="nvarchar" MaxLength="50" />
+    <Property Name="RemitAddress4" Type="nvarchar" MaxLength="50" />
+    <Property Name="RemitAddress5" Type="nvarchar" MaxLength="50" />
+    <Property Name="RemitCountryID" Type="int" />
+    <Property Name="RemitPostCode" Type="varchar" MaxLength="20" />
+    <Property Name="AccountsContactName" Type="nvarchar" MaxLength="100" />
+    <Property Name="AccountsTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="AccountsEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="AccountsFax" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountsTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="FoodSafetyContactName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FoodSafetyTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FoodSafetyEMail" Type="nvarchar" MaxLength="100" />
+    <Property Name="FoodSafetyAltEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="FoodSafetyTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="DocumentationURL" Type="nvarchar" MaxLength="150" />
+    <Property Name="IsFoodSafetyTheRecallContact" Type="bit" Nullable="false" />
+    <Property Name="RecallContactName" Type="nvarchar" MaxLength="100" />
+    <Property Name="RecallTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="RecallEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="RecallOfficeNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecallMobileNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecallFaxNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="USDARegNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsFDARegistered" Type="bit" Nullable="false" />
+    <Property Name="FDARegDate" Type="datetime" />
+    <Property Name="FDARegNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="USAgentName" Type="nvarchar" MaxLength="100" />
+    <Property Name="USAgentAddress" Type="nvarchar(max)" />
+    <Property Name="USTarriffNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="TaxIDNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PACARegNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="DRCRegNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsUSDARegistered" Type="bit" Nullable="false" />
+    <Property Name="SupplierSapCode" Type="varchar" MaxLength="100" />
+    <Property Name="SupplierPassword" Type="varchar" MaxLength="500" />
+    <Property Name="SupplierPasswordSalt" Type="varchar" MaxLength="500" />
+    <Property Name="FDALoginUserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="FDALoginPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="FDALoginPIN" Type="nvarchar" MaxLength="50" />
+    <Property Name="GPSCoordinates" Type="nvarchar" MaxLength="50" />
+    <Property Name="OtherCertification" Type="nvarchar" MaxLength="500" />
+    <Property Name="ProductClaims" Type="nvarchar" MaxLength="500" />
+    <Property Name="InsurerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PolicyNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftPatterns" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsOnSiteStorageYesNoOnlyListID" Type="int" />
+    <Property Name="IsOffsiteStorageYesNoOnlyListID" Type="int" />
+    <Property Name="DistributionDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="NoTempEmployees" Type="int" />
+    <Property Name="NoEngEmployees" Type="int" />
+    <Property Name="NoQualEmployees" Type="int" />
+    <Property Name="NoTechEmployees" Type="int" />
+  </EntityType>
+  <EntityType Name="SupplierAssurance">
+    <Key>
+      <PropertyRef Name="SupplierAssuranceID" />
+    </Key>
+    <Property Name="SupplierAssuranceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="AssuranceSchemeID" Type="int" Nullable="false" />
+    <Property Name="SchemeName" Type="varchar" MaxLength="150" />
+    <Property Name="DateChecked" Type="datetime" />
+    <Property Name="LastAudit" Type="datetime" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="Deadline" Type="datetime" />
+    <Property Name="GradeAchieved" Type="varchar" MaxLength="50" />
+    <Property Name="CheckByUserID" Type="int" />
+    <Property Name="AssuranceNo" Type="varchar" MaxLength="50" />
+    <Property Name="CertFileName" Type="nvarchar" MaxLength="150" />
+    <Property Name="IsAutoAssure" Type="bit" Nullable="false" />
+    <Property Name="SiteCode" Type="varchar" MaxLength="200" />
+    <Property Name="AutoReminder" Type="bit" />
+    <Property Name="DateReceived" Type="datetime" />
+    <Property Name="DateSent" Type="datetime" />
+    <Property Name="DateUploaded" Type="datetime" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="IsLatest" Type="bit" />
+    <Property Name="TransferToMfg" Type="bit" />
+    <Property Name="SignInToken" Type="varchar" MaxLength="1000" />
+    <Property Name="TransferDate" Type="datetime" />
+    <Property Name="ManufacturerID" Type="int" />
+    <Property Name="ApprovalCode" Type="varchar" MaxLength="6" />
+    <Property Name="AutoRenewalSent" Type="bit" />
+    <Property Name="AzureStorageURL" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CCList" Type="varchar" MaxLength="1000" />
+    <Property Name="SupplierCertificationDocumentID" Type="int" />
+    <Property Name="SupplierQuestionnaireID" Type="int" />
+    <Property Name="RawMaterialID" Type="int" />
+    <Property Name="IsUploadComplete" Type="bit" />
+    <Property Name="ParentSupplierAssuranceID" Type="int" />
+  </EntityType>
+  <EntityType Name="SupplierDocument">
+    <Key>
+      <PropertyRef Name="SupplierDocumentID" />
+    </Key>
+    <Property Name="SupplierDocumentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="SupplierDocumentTypeID" Type="int" />
+    <Property Name="DocumentShortName" Type="varchar" MaxLength="100" />
+    <Property Name="DocumentName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Tags" Type="ntext" />
+    <Property Name="DateUploaded" Type="datetime" Nullable="false" />
+    <Property Name="UploadedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Comments" Type="ntext" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="InDevelopment" Type="bit" />
+    <Property Name="ManufacturerID" Type="int" />
+    <Property Name="RawMaterialID" Type="int" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="AzureStorageURL" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsArchived" Type="bit" />
+    <Property Name="ArchivedReason" Type="varchar" MaxLength="1000" />
+    <Property Name="ArchivedDate" Type="datetime" />
+    <Property Name="ArchivedBy" Type="varchar" MaxLength="100" />
+    <Property Name="IsNoExpiry" Type="bit" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="ExpiredDocumentID" Type="int" />
+  </EntityType>
+  <EntityType Name="SupplierQuestionnaire">
+    <Key>
+      <PropertyRef Name="SupplierQuestionnaireID" />
+    </Key>
+    <Property Name="SupplierQuestionnaireID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuestionnaireID" Type="int" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="RawMaterialID" Type="int" />
+    <Property Name="ManufacturerID" Type="int" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="DateSupplierSent" Type="datetime" />
+    <Property Name="DateSupplierReceived" Type="datetime" />
+    <Property Name="DateSupplierApproved" Type="datetime" />
+    <Property Name="SubmittedForApproval" Type="bit" Nullable="false" />
+    <Property Name="SubmittedForApprovalDate" Type="datetime" Nullable="false" />
+    <Property Name="QuestionnaireDeadline" Type="datetime" />
+    <Property Name="FeedbackRequired" Type="bit" Nullable="false" />
+    <Property Name="AgreeElectronicSign" Type="bit" />
+    <Property Name="AgreeNoDeviation" Type="bit" />
+    <Property Name="AccurateStatementOfFact" Type="bit" />
+    <Property Name="AuthorisedToSign" Type="bit" />
+    <Property Name="DocumentUsedAsEvidence" Type="bit" />
+    <Property Name="FDACompliance" Type="bit" />
+    <Property Name="UKEUStatutoryRequirement" Type="bit" />
+    <Property Name="TrueRepresentationOfProduct" Type="bit" />
+    <Property Name="ChangesMustBeNotified" Type="bit" />
+    <Property Name="RecordsHeld1Year" Type="bit" />
+    <Property Name="IncidentNotifications" Type="bit" />
+    <Property Name="RecallNotifications" Type="bit" />
+    <Property Name="WithdrawalNotifications" Type="bit" />
+    <Property Name="SupplierSignName" Type="varchar" MaxLength="50" />
+    <Property Name="SupplierSignPosition" Type="varchar" MaxLength="75" />
+    <Property Name="SupplierSignCompany" Type="varchar" MaxLength="75" />
+    <Property Name="SupplierSignDate" Type="datetime" />
+    <Property Name="CustomerSignName" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerSignPosition" Type="varchar" MaxLength="75" />
+    <Property Name="CustomerSignCompany" Type="varchar" MaxLength="75" />
+    <Property Name="CustomerSignDate" Type="datetime" />
+    <Property Name="SupplierApprovedBy" Type="varchar" MaxLength="50" />
+    <Property Name="SupplierApprovedTtitle" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerApprovedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerAprovedTitle" Type="varchar" MaxLength="50" />
+    <Property Name="LatestIssueNo" Type="varchar" MaxLength="5" />
+    <Property Name="IssueDate" Type="datetime" />
+    <Property Name="DocumentRef" Type="varchar" MaxLength="20" />
+    <Property Name="FinalPDF" Type="image" />
+    <Property Name="FinalPDFURL" Type="varchar" MaxLength="255" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="IsArchived" Type="bit" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="TransferToMfg" Type="bit" />
+    <Property Name="SignInToken" Type="varchar" MaxLength="1000" />
+    <Property Name="TransferDate" Type="datetime" />
+    <Property Name="ApprovalCode" Type="varchar" MaxLength="6" />
+    <Property Name="AuditRatingID" Type="int" />
+    <Property Name="InDevelopment" Type="bit" />
+    <Property Name="UpdatedByUserID" Type="int" />
+    <Property Name="CreatedByUserID" Type="int" />
+    <Property Name="DefaultAccountManagerID" Type="int" />
+    <Property Name="AzureStorageURL" Type="varchar" MaxLength="1000" />
+    <Property Name="SupplierSignDigitalSignature" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CustomerSignDigitalSignature" Type="nvarchar" MaxLength="1000" />
+    <Property Name="AgentSignDigitalSignature" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsFromWebsite" Type="bit" />
+    <Property Name="NutshellLeadID" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <Association Name="FK_RawMaterialManufacturer_Manufacturer">
+    <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="1" />
+    <End Role="RawMaterialManufacturer" Type="Self.RawMaterialManufacturer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="ManufacturerID" />
+      </Principal>
+      <Dependent Role="RawMaterialManufacturer">
+        <PropertyRef Name="ManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RawMaterialManufacturer_RawMaterial">
+    <End Role="RawMaterial" Type="Self.RawMaterial" Multiplicity="0..1" />
+    <End Role="RawMaterialManufacturer" Type="Self.RawMaterialManufacturer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RawMaterial">
+        <PropertyRef Name="RawMaterialID" />
+      </Principal>
+      <Dependent Role="RawMaterialManufacturer">
+        <PropertyRef Name="RawMaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RawMaterialManufacturer_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="RawMaterialManufacturer" Type="Self.RawMaterialManufacturer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="RawMaterialManufacturer">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RawMaterialSupplier_RawMaterial">
+    <End Role="RawMaterial" Type="Self.RawMaterial" Multiplicity="1" />
+    <End Role="RawMaterialSupplier" Type="Self.RawMaterialSupplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RawMaterial">
+        <PropertyRef Name="RawMaterialID" />
+      </Principal>
+      <Dependent Role="RawMaterialSupplier">
+        <PropertyRef Name="RawMaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RawMaterialSupplier_RawMaterial1">
+    <End Role="RawMaterial" Type="Self.RawMaterial" Multiplicity="0..1" />
+    <End Role="RawMaterialSupplier" Type="Self.RawMaterialSupplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RawMaterial">
+        <PropertyRef Name="RawMaterialID" />
+      </Principal>
+      <Dependent Role="RawMaterialSupplier">
+        <PropertyRef Name="LinkedRawMaterialListID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RawMaterialSupplier_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="RawMaterialSupplier" Type="Self.RawMaterialSupplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="RawMaterialSupplier">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierAssurance_Manufacturer">
+    <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="0..1" />
+    <End Role="SupplierAssurance" Type="Self.SupplierAssurance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="ManufacturerID" />
+      </Principal>
+      <Dependent Role="SupplierAssurance">
+        <PropertyRef Name="ManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierAssurance_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SupplierAssurance" Type="Self.SupplierAssurance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="SupplierAssurance">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierDocument_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="SupplierDocument" Type="Self.SupplierDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="SupplierDocument">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierQuestionnaire_Manufacturer">
+    <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="0..1" />
+    <End Role="SupplierQuestionnaire" Type="Self.SupplierQuestionnaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="ManufacturerID" />
+      </Principal>
+      <Dependent Role="SupplierQuestionnaire">
+        <PropertyRef Name="ManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierQuestionnaire_RawMaterial">
+    <End Role="RawMaterial" Type="Self.RawMaterial" Multiplicity="0..1" />
+    <End Role="SupplierQuestionnaire" Type="Self.SupplierQuestionnaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RawMaterial">
+        <PropertyRef Name="RawMaterialID" />
+      </Principal>
+      <Dependent Role="SupplierQuestionnaire">
+        <PropertyRef Name="RawMaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierQuestionnaire_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="SupplierQuestionnaire" Type="Self.SupplierQuestionnaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="SupplierQuestionnaire">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HACCPNowSQLDevModelStoreContainer">
+    <EntitySet Name="Manufacturer" EntityType="Self.Manufacturer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RawMaterial" EntityType="Self.RawMaterial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RawMaterialManufacturer" EntityType="Self.RawMaterialManufacturer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RawMaterialSupplier" EntityType="Self.RawMaterialSupplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SupplierAssurance" EntityType="Self.SupplierAssurance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SupplierDocument" EntityType="Self.SupplierDocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SupplierQuestionnaire" EntityType="Self.SupplierQuestionnaire" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_RawMaterialManufacturer_Manufacturer" Association="Self.FK_RawMaterialManufacturer_Manufacturer">
+      <End Role="Manufacturer" EntitySet="Manufacturer" />
+      <End Role="RawMaterialManufacturer" EntitySet="RawMaterialManufacturer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RawMaterialManufacturer_RawMaterial" Association="Self.FK_RawMaterialManufacturer_RawMaterial">
+      <End Role="RawMaterial" EntitySet="RawMaterial" />
+      <End Role="RawMaterialManufacturer" EntitySet="RawMaterialManufacturer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RawMaterialManufacturer_Supplier" Association="Self.FK_RawMaterialManufacturer_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="RawMaterialManufacturer" EntitySet="RawMaterialManufacturer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RawMaterialSupplier_RawMaterial" Association="Self.FK_RawMaterialSupplier_RawMaterial">
+      <End Role="RawMaterial" EntitySet="RawMaterial" />
+      <End Role="RawMaterialSupplier" EntitySet="RawMaterialSupplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RawMaterialSupplier_RawMaterial1" Association="Self.FK_RawMaterialSupplier_RawMaterial1">
+      <End Role="RawMaterial" EntitySet="RawMaterial" />
+      <End Role="RawMaterialSupplier" EntitySet="RawMaterialSupplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RawMaterialSupplier_Supplier" Association="Self.FK_RawMaterialSupplier_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="RawMaterialSupplier" EntitySet="RawMaterialSupplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierAssurance_Manufacturer" Association="Self.FK_SupplierAssurance_Manufacturer">
+      <End Role="Manufacturer" EntitySet="Manufacturer" />
+      <End Role="SupplierAssurance" EntitySet="SupplierAssurance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierAssurance_Supplier" Association="Self.FK_SupplierAssurance_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="SupplierAssurance" EntitySet="SupplierAssurance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierDocument_Supplier" Association="Self.FK_SupplierDocument_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="SupplierDocument" EntitySet="SupplierDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierQuestionnaire_Manufacturer" Association="Self.FK_SupplierQuestionnaire_Manufacturer">
+      <End Role="Manufacturer" EntitySet="Manufacturer" />
+      <End Role="SupplierQuestionnaire" EntitySet="SupplierQuestionnaire" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierQuestionnaire_RawMaterial" Association="Self.FK_SupplierQuestionnaire_RawMaterial">
+      <End Role="RawMaterial" EntitySet="RawMaterial" />
+      <End Role="SupplierQuestionnaire" EntitySet="SupplierQuestionnaire" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierQuestionnaire_Supplier" Association="Self.FK_SupplierQuestionnaire_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="SupplierQuestionnaire" EntitySet="SupplierQuestionnaire" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

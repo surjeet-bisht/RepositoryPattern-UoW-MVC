@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HACCPNowSQLDevModelStoreContainer" CdmEntityContainer="HACCPNowSQLDevEntities">
+    <EntitySetMapping Name="Manufacturers">
+      <EntityTypeMapping TypeName="HACCPNowSQLDevModel.Manufacturer">
+        <MappingFragment StoreEntitySet="Manufacturer">
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="GlobalCompanyID" ColumnName="GlobalCompanyID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="MSiteName" ColumnName="MSiteName" />
+          <ScalarProperty Name="MAddress1" ColumnName="MAddress1" />
+          <ScalarProperty Name="MAddress2" ColumnName="MAddress2" />
+          <ScalarProperty Name="MAddress3" ColumnName="MAddress3" />
+          <ScalarProperty Name="MAddress4" ColumnName="MAddress4" />
+          <ScalarProperty Name="MAddress5" ColumnName="MAddress5" />
+          <ScalarProperty Name="MCountryID" ColumnName="MCountryID" />
+          <ScalarProperty Name="MPostCode" ColumnName="MPostCode" />
+          <ScalarProperty Name="MTel" ColumnName="MTel" />
+          <ScalarProperty Name="MFax" ColumnName="MFax" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MName" ColumnName="MName" />
+          <ScalarProperty Name="MContactEmail" ColumnName="MContactEmail" />
+          <ScalarProperty Name="IsChanged" ColumnName="IsChanged" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="MSiteCode" ColumnName="MSiteCode" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RawMaterials">
+      <EntityTypeMapping TypeName="HACCPNowSQLDevModel.RawMaterial">
+        <MappingFragment StoreEntitySet="RawMaterial">
+          <ScalarProperty Name="RawMaterialID" ColumnName="RawMaterialID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="RawMaterial1" ColumnName="RawMaterial" />
+          <ScalarProperty Name="Variety" ColumnName="Variety" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="PackSize" ColumnName="PackSize" />
+          <ScalarProperty Name="Packaging" ColumnName="Packaging" />
+          <ScalarProperty Name="LegalName" ColumnName="LegalName" />
+          <ScalarProperty Name="RawMaterialDescription" ColumnName="RawMaterialDescription" />
+          <ScalarProperty Name="IngrDeclaration" ColumnName="IngrDeclaration" />
+          <ScalarProperty Name="RawMaterialOrganicDescription" ColumnName="RawMaterialOrganicDescription" />
+          <ScalarProperty Name="RawMaterialShelfLifeID" ColumnName="RawMaterialShelfLifeID" />
+          <ScalarProperty Name="RawMaterialSAPCode" ColumnName="RawMaterialSAPCode" />
+          <ScalarProperty Name="CommercialCode" ColumnName="CommercialCode" />
+          <ScalarProperty Name="IsReadyToEat" ColumnName="IsReadyToEat" />
+          <ScalarProperty Name="IsBulkProduct" ColumnName="IsBulkProduct" />
+          <ScalarProperty Name="SupplierProductCode" ColumnName="SupplierProductCode" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierFDARegNo" ColumnName="SupplierFDARegNo" />
+          <ScalarProperty Name="DateCodeFormat" ColumnName="DateCodeFormat" />
+          <ScalarProperty Name="BatchLotCodeDetail" ColumnName="BatchLotCodeDetail" />
+          <ScalarProperty Name="ShelfLifeDesignation" ColumnName="ShelfLifeDesignation" />
+          <ScalarProperty Name="ShelfLifeUnopened" ColumnName="ShelfLifeUnopened" />
+          <ScalarProperty Name="ShelfLifeOpened" ColumnName="ShelfLifeOpened" />
+          <ScalarProperty Name="DistributionChain" ColumnName="DistributionChain" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="ManufacturerFDARegNo" ColumnName="ManufacturerFDARegNo" />
+          <ScalarProperty Name="FSVPExemptYesNoOnlyListID" ColumnName="FSVPExemptYesNoOnlyListID" />
+          <ScalarProperty Name="FSVPInPlaceYesNoListID" ColumnName="FSVPInPlaceYesNoListID" />
+          <ScalarProperty Name="FSVPDocumentName" ColumnName="FSVPDocumentName" />
+          <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
+          <ScalarProperty Name="CountryOfOriginID" ColumnName="CountryOfOriginID" />
+          <ScalarProperty Name="CountryOfTransit" ColumnName="CountryOfTransit" />
+          <ScalarProperty Name="CountryOfTransitID" ColumnName="CountryOfTransitID" />
+          <ScalarProperty Name="CountryOfManufacture" ColumnName="CountryOfManufacture" />
+          <ScalarProperty Name="CountryOfManufactureID" ColumnName="CountryOfManufactureID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="ApprovedUserID" ColumnName="ApprovedUserID" />
+          <ScalarProperty Name="ApprovalBasis" ColumnName="ApprovalBasis" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ImportID" ColumnName="ImportID" />
+          <ScalarProperty Name="GTIN" ColumnName="GTIN" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DocumentPath" ColumnName="DocumentPath" />
+          <ScalarProperty Name="RawMaterialDocument" ColumnName="RawMaterialDocument" />
+          <ScalarProperty Name="InDevelopment" ColumnName="InDevelopment" />
+          <ScalarProperty Name="RawMaterialURL" ColumnName="RawMaterialURL" />
+          <ScalarProperty Name="ServingsPerContainer" ColumnName="ServingsPerContainer" />
+          <ScalarProperty Name="ServingSize" ColumnName="ServingSize" />
+          <ScalarProperty Name="FSVPDocumentFileNameID" ColumnName="FSVPDocumentFileNameID" />
+          <ScalarProperty Name="IsGlobal" ColumnName="IsGlobal" />
+          <ScalarProperty Name="KBFoodSubCategoryID" ColumnName="KBFoodSubCategoryID" />
+          <ScalarProperty Name="RawMaterialTypeID" ColumnName="RawMaterialTypeID" />
+          <ScalarProperty Name="IsWIP" ColumnName="IsWIP" />
+          <ScalarProperty Name="IsPackaging" ColumnName="IsPackaging" />
+          <ScalarProperty Name="MethodOfProduction" ColumnName="MethodOfProduction" />
+          <ScalarProperty Name="MaterialUnitTypeID" ColumnName="MaterialUnitTypeID" />
+          <ScalarProperty Name="SpecificGravity" ColumnName="SpecificGravity" />
+          <ScalarProperty Name="GS1FoodSubCategoryID" ColumnName="GS1FoodSubCategoryID" />
+          <ScalarProperty Name="RawMaterialRiskCategoryID" ColumnName="RawMaterialRiskCategoryID" />
+          <ScalarProperty Name="MaterialUnitNetWtKg" ColumnName="MaterialUnitNetWtKg" />
+          <ScalarProperty Name="PlasticTaxGramsPerKg" ColumnName="PlasticTaxGramsPerKg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RawMaterialManufacturers">
+      <EntityTypeMapping TypeName="HACCPNowSQLDevModel.RawMaterialManufacturer">
+        <MappingFragment StoreEntitySet="RawMaterialManufacturer">
+          <ScalarProperty Name="RawMaterialManufacturerID" ColumnName="RawMaterialManufacturerID" />
+          <ScalarProperty Name="RawMaterialID" ColumnName="RawMaterialID" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsSelectedForSupplier" ColumnName="IsSelectedForSupplier" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="ApprovalStatusID" ColumnName="ApprovalStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RawMaterialSuppliers">
+      <EntityTypeMapping TypeName="HACCPNowSQLDevModel.RawMaterialSupplier">
+        <MappingFragment StoreEntitySet="RawMaterialSupplier">
+          <ScalarProperty Name="RawMaterialSupplierID" ColumnName="RawMaterialSupplierID" />
+          <ScalarProperty Name="RawMaterialID" ColumnName="RawMaterialID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="RawMaterial" ColumnName="RawMaterial" />
+          <ScalarProperty Name="Variety" ColumnName="Variety" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="PackSize" ColumnName="PackSize" />
+          <ScalarProperty Name="Packaging" ColumnName="Packaging" />
+          <ScalarProperty Name="LegalName" ColumnName="LegalName" />
+          <ScalarProperty Name="RawMaterialDescription" ColumnName="RawMaterialDescription" />
+          <ScalarProperty Name="IngrDeclaration" ColumnName="IngrDeclaration" />
+          <ScalarProperty Name="RawMaterialOrganicDescription" ColumnName="RawMaterialOrganicDescription" />
+          <ScalarProperty Name="RawMaterialShelfLifeID" ColumnName="RawMaterialShelfLifeID" />
+          <ScalarProperty Name="RawMaterialSAPCode" ColumnName="RawMaterialSAPCode" />
+          <ScalarProperty Name="RawMaterialUnitCost" ColumnName="RawMaterialUnitCost" />
+          <ScalarProperty Name="CommercialCode" ColumnName="CommercialCode" />
+          <ScalarProperty Name="IsReadyToEat" ColumnName="IsReadyToEat" />
+          <ScalarProperty Name="IsBulkProduct" ColumnName="IsBulkProduct" />
+          <ScalarProperty Name="SupplierProductCode" ColumnName="SupplierProductCode" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierFDARegNo" ColumnName="SupplierFDARegNo" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="ManufacturerFDARegNo" ColumnName="ManufacturerFDARegNo" />
+          <ScalarProperty Name="DateCodeFormat" ColumnName="DateCodeFormat" />
+          <ScalarProperty Name="BatchLotCodeDetail" ColumnName="BatchLotCodeDetail" />
+          <ScalarProperty Name="ShelfLifeDesignation" ColumnName="ShelfLifeDesignation" />
+          <ScalarProperty Name="ShelfLifeUnopened" ColumnName="ShelfLifeUnopened" />
+          <ScalarProperty Name="ShelfLifeOpened" ColumnName="ShelfLifeOpened" />
+          <ScalarProperty Name="DistributionChain" ColumnName="DistributionChain" />
+          <ScalarProperty Name="FSVPExemptYesNoOnlyListID" ColumnName="FSVPExemptYesNoOnlyListID" />
+          <ScalarProperty Name="FSVPInPlaceYesNoListID" ColumnName="FSVPInPlaceYesNoListID" />
+          <ScalarProperty Name="FSVPDocumentName" ColumnName="FSVPDocumentName" />
+          <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
+          <ScalarProperty Name="CountryOfOriginID" ColumnName="CountryOfOriginID" />
+          <ScalarProperty Name="CountryOfTransit" ColumnName="CountryOfTransit" />
+          <ScalarProperty Name="CountryOfTransitID" ColumnName="CountryOfTransitID" />
+          <ScalarProperty Name="CountryOfManufacture" ColumnName="CountryOfManufacture" />
+          <ScalarProperty Name="CountryOfManufactureID" ColumnName="CountryOfManufactureID" />
+          <ScalarProperty Name="IsAutoQuestionnaire" ColumnName="IsAutoQuestionnaire" />
+          <ScalarProperty Name="QuestionnaireID" ColumnName="QuestionnaireID" />
+          <ScalarProperty Name="SupplierQuestionnaireID" ColumnName="SupplierQuestionnaireID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="ApprovedUserID" ColumnName="ApprovedUserID" />
+          <ScalarProperty Name="ApprovalBasis" ColumnName="ApprovalBasis" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DocumentPath" ColumnName="DocumentPath" />
+          <ScalarProperty Name="RawMaterialDocument" ColumnName="RawMaterialDocument" />
+          <ScalarProperty Name="ApprovalStatusID" ColumnName="ApprovalStatusID" />
+          <ScalarProperty Name="ServingsPerContainer" ColumnName="ServingsPerContainer" />
+          <ScalarProperty Name="ServingSize" ColumnName="ServingSize" />
+          <ScalarProperty Name="FSVPDocumentFileNameID" ColumnName="FSVPDocumentFileNameID" />
+          <ScalarProperty Name="RawMaterialTypeID" ColumnName="RawMaterialTypeID" />
+          <ScalarProperty Name="GTIN" ColumnName="GTIN" />
+          <ScalarProperty Name="MethodOfProduction" ColumnName="MethodOfProduction" />
+          <ScalarProperty Name="SupplierRawMaterialName" ColumnName="SupplierRawMaterialName" />
+          <ScalarProperty Name="LinkedRawMaterialListID" ColumnName="LinkedRawMaterialListID" />
+          <ScalarProperty Name="VatRateID" ColumnName="VatRateID" />
+          <ScalarProperty Name="LeadTime" ColumnName="LeadTime" />
+          <ScalarProperty Name="MakeUpInstruction" ColumnName="MakeUpInstruction" />
+          <ScalarProperty Name="MaterialUnitNetWtKg" ColumnName="MaterialUnitNetWtKg" />
+          <ScalarProperty Name="PlasticTaxGramsPerKg" ColumnName="PlasticTaxGramsPerKg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="HACCPNowSQLDevModel.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="Supplier1" ColumnName="Supplier" />
+          <ScalarProperty Name="SupplierRef" ColumnName="SupplierRef" />
+          <ScalarProperty Name="SupplierTypeID" ColumnName="SupplierTypeID" />
+          <ScalarProperty Name="SupplierGroupID" ColumnName="SupplierGroupID" />
+          <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+          <ScalarProperty Name="AddressOptional" ColumnName="AddressOptional" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address4" ColumnName="Address4" />
+          <ScalarProperty Name="Address5" ColumnName="Address5" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="WebSiteURL" ColumnName="WebSiteURL" />
+          <ScalarProperty Name="MSiteName" ColumnName="MSiteName" />
+          <ScalarProperty Name="MAddress1" ColumnName="MAddress1" />
+          <ScalarProperty Name="MAddress2" ColumnName="MAddress2" />
+          <ScalarProperty Name="MAddress3" ColumnName="MAddress3" />
+          <ScalarProperty Name="MAddress4" ColumnName="MAddress4" />
+          <ScalarProperty Name="MAddress5" ColumnName="MAddress5" />
+          <ScalarProperty Name="MCountryID" ColumnName="MCountryID" />
+          <ScalarProperty Name="MPostCode" ColumnName="MPostCode" />
+          <ScalarProperty Name="MTel" ColumnName="MTel" />
+          <ScalarProperty Name="MFax" ColumnName="MFax" />
+          <ScalarProperty Name="CompanyProfile" ColumnName="CompanyProfile" />
+          <ScalarProperty Name="MainContact" ColumnName="MainContact" />
+          <ScalarProperty Name="MainContactJobTitle" ColumnName="MainContactJobTitle" />
+          <ScalarProperty Name="MainContactEmail" ColumnName="MainContactEmail" />
+          <ScalarProperty Name="MainContactTel" ColumnName="MainContactTel" />
+          <ScalarProperty Name="TechContact" ColumnName="TechContact" />
+          <ScalarProperty Name="TechContactJobTitle" ColumnName="TechContactJobTitle" />
+          <ScalarProperty Name="TechContactEmail" ColumnName="TechContactEmail" />
+          <ScalarProperty Name="TechContactTel" ColumnName="TechContactTel" />
+          <ScalarProperty Name="TechContactPassword" ColumnName="TechContactPassword" />
+          <ScalarProperty Name="SendChaserEmails" ColumnName="SendChaserEmails" />
+          <ScalarProperty Name="AccountManagerUserID" ColumnName="AccountManagerUserID" />
+          <ScalarProperty Name="EmergencyContactName" ColumnName="EmergencyContactName" />
+          <ScalarProperty Name="EmergencyContactJobTitle" ColumnName="EmergencyContactJobTitle" />
+          <ScalarProperty Name="EmergencyContactEmail" ColumnName="EmergencyContactEmail" />
+          <ScalarProperty Name="EmergencyContactTel" ColumnName="EmergencyContactTel" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="AutoQuestionnaire" ColumnName="AutoQuestionnaire" />
+          <ScalarProperty Name="MonitoringFormID" ColumnName="MonitoringFormID" />
+          <ScalarProperty Name="SedexNo" ColumnName="SedexNo" />
+          <ScalarProperty Name="IsSMETAAudit" ColumnName="IsSMETAAudit" />
+          <ScalarProperty Name="SMETAPillar" ColumnName="SMETAPillar" />
+          <ScalarProperty Name="HealthMarkNo" ColumnName="HealthMarkNo" />
+          <ScalarProperty Name="LiabilityPerOccurence" ColumnName="LiabilityPerOccurence" />
+          <ScalarProperty Name="LiabilityPersonalInjury" ColumnName="LiabilityPersonalInjury" />
+          <ScalarProperty Name="LiabilityGeneralAggregate" ColumnName="LiabilityGeneralAggregate" />
+          <ScalarProperty Name="LiabilityProductsAggregate" ColumnName="LiabilityProductsAggregate" />
+          <ScalarProperty Name="LiabilityAuto" ColumnName="LiabilityAuto" />
+          <ScalarProperty Name="LiabilityMotorTruck" ColumnName="LiabilityMotorTruck" />
+          <ScalarProperty Name="LiabilityExcessUmbrella" ColumnName="LiabilityExcessUmbrella" />
+          <ScalarProperty Name="LiabilityEmployers" ColumnName="LiabilityEmployers" />
+          <ScalarProperty Name="StatutoryWorkersCompensation" ColumnName="StatutoryWorkersCompensation" />
+          <ScalarProperty Name="CertifyAdditionalInsured" ColumnName="CertifyAdditionalInsured" />
+          <ScalarProperty Name="Turnover" ColumnName="Turnover" />
+          <ScalarProperty Name="ManufacturingCapacity" ColumnName="ManufacturingCapacity" />
+          <ScalarProperty Name="NoFTEmployees" ColumnName="NoFTEmployees" />
+          <ScalarProperty Name="NoPTEmployees" ColumnName="NoPTEmployees" />
+          <ScalarProperty Name="PremisesSize" ColumnName="PremisesSize" />
+          <ScalarProperty Name="YearOfConstruction" ColumnName="YearOfConstruction" />
+          <ScalarProperty Name="YearEstablished" ColumnName="YearEstablished" />
+          <ScalarProperty Name="NameOfParentCo" ColumnName="NameOfParentCo" />
+          <ScalarProperty Name="NoProductsManufactured" ColumnName="NoProductsManufactured" />
+          <ScalarProperty Name="NoExportShipmentsPerYear" ColumnName="NoExportShipmentsPerYear" />
+          <ScalarProperty Name="AnnualExportValue" ColumnName="AnnualExportValue" />
+          <ScalarProperty Name="DescriptionOfProducts" ColumnName="DescriptionOfProducts" />
+          <ScalarProperty Name="IsGFSICertificatedYesNoOnlyListID" ColumnName="IsGFSICertificatedYesNoOnlyListID" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ImportID" ColumnName="ImportID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="IsCCToCommerial" ColumnName="IsCCToCommerial" />
+          <ScalarProperty Name="DunsNo" ColumnName="DunsNo" />
+          <ScalarProperty Name="IsOptional" ColumnName="IsOptional" />
+          <ScalarProperty Name="GFBIHashID" ColumnName="GFBIHashID" />
+          <ScalarProperty Name="InDevelopment" ColumnName="InDevelopment" />
+          <ScalarProperty Name="IsGlobal" ColumnName="IsGlobal" />
+          <ScalarProperty Name="ApprovalStatusID" ColumnName="ApprovalStatusID" />
+          <ScalarProperty Name="GlobalSupplierID" ColumnName="GlobalSupplierID" />
+          <ScalarProperty Name="IsSeparateRemittance" ColumnName="IsSeparateRemittance" />
+          <ScalarProperty Name="RemitAddress1" ColumnName="RemitAddress1" />
+          <ScalarProperty Name="RemitAddress2" ColumnName="RemitAddress2" />
+          <ScalarProperty Name="RemitAddress3" ColumnName="RemitAddress3" />
+          <ScalarProperty Name="RemitAddress4" ColumnName="RemitAddress4" />
+          <ScalarProperty Name="RemitAddress5" ColumnName="RemitAddress5" />
+          <ScalarProperty Name="RemitCountryID" ColumnName="RemitCountryID" />
+          <ScalarProperty Name="RemitPostCode" ColumnName="RemitPostCode" />
+          <ScalarProperty Name="AccountsContactName" ColumnName="AccountsContactName" />
+          <ScalarProperty Name="AccountsTitle" ColumnName="AccountsTitle" />
+          <ScalarProperty Name="AccountsEmail" ColumnName="AccountsEmail" />
+          <ScalarProperty Name="AccountsFax" ColumnName="AccountsFax" />
+          <ScalarProperty Name="AccountsTel" ColumnName="AccountsTel" />
+          <ScalarProperty Name="FoodSafetyContactName" ColumnName="FoodSafetyContactName" />
+          <ScalarProperty Name="FoodSafetyTitle" ColumnName="FoodSafetyTitle" />
+          <ScalarProperty Name="FoodSafetyEMail" ColumnName="FoodSafetyEMail" />
+          <ScalarProperty Name="FoodSafetyAltEmail" ColumnName="FoodSafetyAltEmail" />
+          <ScalarProperty Name="FoodSafetyTel" ColumnName="FoodSafetyTel" />
+          <ScalarProperty Name="DocumentationURL" ColumnName="DocumentationURL" />
+          <ScalarProperty Name="IsFoodSafetyTheRecallContact" ColumnName="IsFoodSafetyTheRecallContact" />
+          <ScalarProperty Name="RecallContactName" ColumnName="RecallContactName" />
+          <ScalarProperty Name="RecallTitle" ColumnName="RecallTitle" />
+          <ScalarProperty Name="RecallEmail" ColumnName="RecallEmail" />
+          <ScalarProperty Name="RecallOfficeNo" ColumnName="RecallOfficeNo" />
+          <ScalarProperty Name="RecallMobileNo" ColumnName="RecallMobileNo" />
+          <ScalarProperty Name="RecallFaxNo" ColumnName="RecallFaxNo" />
+          <ScalarProperty Name="USDARegNo" ColumnName="USDARegNo" />
+          <ScalarProperty Name="IsFDARegistered" ColumnName="IsFDARegistered" />
+          <ScalarProperty Name="FDARegDate" ColumnName="FDARegDate" />
+          <ScalarProperty Name="FDARegNo" ColumnName="FDARegNo" />
+          <ScalarProperty Name="USAgentName" ColumnName="USAgentName" />
+          <ScalarProperty Name="USAgentAddress" ColumnName="USAgentAddress" />
+          <ScalarProperty Name="USTarriffNo" ColumnName="USTarriffNo" />
+          <ScalarProperty Name="TaxIDNo" ColumnName="TaxIDNo" />
+          <ScalarProperty Name="PACARegNo" ColumnName="PACARegNo" />
+          <ScalarProperty Name="DRCRegNo" ColumnName="DRCRegNo" />
+          <ScalarProperty Name="IsUSDARegistered" ColumnName="IsUSDARegistered" />
+          <ScalarProperty Name="SupplierSapCode" ColumnName="SupplierSapCode" />
+          <ScalarProperty Name="SupplierPassword" ColumnName="SupplierPassword" />
+          <ScalarProperty Name="SupplierPasswordSalt" ColumnName="SupplierPasswordSalt" />
+          <ScalarProperty Name="FDALoginUserID" ColumnName="FDALoginUserID" />
+          <ScalarProperty Name="FDALoginPassword" ColumnName="FDALoginPassword" />
+          <ScalarProperty Name="FDALoginPIN" ColumnName="FDALoginPIN" />
+          <ScalarProperty Name="GPSCoordinates" ColumnName="GPSCoordinates" />
+          <ScalarProperty Name="OtherCertification" ColumnName="OtherCertification" />
+          <ScalarProperty Name="ProductClaims" ColumnName="ProductClaims" />
+          <ScalarProperty Name="InsurerName" ColumnName="InsurerName" />
+          <ScalarProperty Name="PolicyNo" ColumnName="PolicyNo" />
+          <ScalarProperty Name="ShiftPatterns" ColumnName="ShiftPatterns" />
+          <ScalarProperty Name="IsOnSiteStorageYesNoOnlyListID" ColumnName="IsOnSiteStorageYesNoOnlyListID" />
+          <ScalarProperty Name="IsOffsiteStorageYesNoOnlyListID" ColumnName="IsOffsiteStorageYesNoOnlyListID" />
+          <ScalarProperty Name="DistributionDescription" ColumnName="DistributionDescription" />
+          <ScalarProperty Name="NoTempEmployees" ColumnName="NoTempEmployees" />
+          <ScalarProperty Name="NoEngEmployees" ColumnName="NoEngEmployees" />
+          <ScalarProperty Name="NoQualEmployees" ColumnName="NoQualEmployees" />
+          <ScalarProperty Name="NoTechEmployees" ColumnName="NoTechEmployees" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierAssurances">
+      <EntityTypeMapping TypeName="HACCPNowSQLDevModel.SupplierAssurance">
+        <MappingFragment StoreEntitySet="SupplierAssurance">
+          <ScalarProperty Name="SupplierAssuranceID" ColumnName="SupplierAssuranceID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="AssuranceSchemeID" ColumnName="AssuranceSchemeID" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="DateChecked" ColumnName="DateChecked" />
+          <ScalarProperty Name="LastAudit" ColumnName="LastAudit" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+          <ScalarProperty Name="GradeAchieved" ColumnName="GradeAchieved" />
+          <ScalarProperty Name="CheckByUserID" ColumnName="CheckByUserID" />
+          <ScalarProperty Name="AssuranceNo" ColumnName="AssuranceNo" />
+          <ScalarProperty Name="CertFileName" ColumnName="CertFileName" />
+          <ScalarProperty Name="IsAutoAssure" ColumnName="IsAutoAssure" />
+          <ScalarProperty Name="SiteCode" ColumnName="SiteCode" />
+          <ScalarProperty Name="AutoReminder" ColumnName="AutoReminder" />
+          <ScalarProperty Name="DateReceived" ColumnName="DateReceived" />
+          <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+          <ScalarProperty Name="DateUploaded" ColumnName="DateUploaded" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="IsLatest" ColumnName="IsLatest" />
+          <ScalarProperty Name="TransferToMfg" ColumnName="TransferToMfg" />
+          <ScalarProperty Name="SignInToken" ColumnName="SignInToken" />
+          <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="ApprovalCode" ColumnName="ApprovalCode" />
+          <ScalarProperty Name="AutoRenewalSent" ColumnName="AutoRenewalSent" />
+          <ScalarProperty Name="AzureStorageURL" ColumnName="AzureStorageURL" />
+          <ScalarProperty Name="CCList" ColumnName="CCList" />
+          <ScalarProperty Name="SupplierCertificationDocumentID" ColumnName="SupplierCertificationDocumentID" />
+          <ScalarProperty Name="SupplierQuestionnaireID" ColumnName="SupplierQuestionnaireID" />
+          <ScalarProperty Name="RawMaterialID" ColumnName="RawMaterialID" />
+          <ScalarProperty Name="IsUploadComplete" ColumnName="IsUploadComplete" />
+          <ScalarProperty Name="ParentSupplierAssuranceID" ColumnName="ParentSupplierAssuranceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierDocuments">
+      <EntityTypeMapping TypeName="HACCPNowSQLDevModel.SupplierDocument">
+        <MappingFragment StoreEntitySet="SupplierDocument">
+          <ScalarProperty Name="SupplierDocumentID" ColumnName="SupplierDocumentID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="SupplierDocumentTypeID" ColumnName="SupplierDocumentTypeID" />
+          <ScalarProperty Name="DocumentShortName" ColumnName="DocumentShortName" />
+          <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="DateUploaded" ColumnName="DateUploaded" />
+          <ScalarProperty Name="UploadedBy" ColumnName="UploadedBy" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="InDevelopment" ColumnName="InDevelopment" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="RawMaterialID" ColumnName="RawMaterialID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="AzureStorageURL" ColumnName="AzureStorageURL" />
+          <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+          <ScalarProperty Name="ArchivedReason" ColumnName="ArchivedReason" />
+          <ScalarProperty Name="ArchivedDate" ColumnName="ArchivedDate" />
+          <ScalarProperty Name="ArchivedBy" ColumnName="ArchivedBy" />
+          <ScalarProperty Name="IsNoExpiry" ColumnName="IsNoExpiry" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ExpiredDocumentID" ColumnName="ExpiredDocumentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierQuestionnaires">
+      <EntityTypeMapping TypeName="HACCPNowSQLDevModel.SupplierQuestionnaire">
+        <MappingFragment StoreEntitySet="SupplierQuestionnaire">
+          <ScalarProperty Name="SupplierQuestionnaireID" ColumnName="SupplierQuestionnaireID" />
+          <ScalarProperty Name="QuestionnaireID" ColumnName="QuestionnaireID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="RawMaterialID" ColumnName="RawMaterialID" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateSupplierSent" ColumnName="DateSupplierSent" />
+          <ScalarProperty Name="DateSupplierReceived" ColumnName="DateSupplierReceived" />
+          <ScalarProperty Name="DateSupplierApproved" ColumnName="DateSupplierApproved" />
+          <ScalarProperty Name="SubmittedForApproval" ColumnName="SubmittedForApproval" />
+          <ScalarProperty Name="SubmittedForApprovalDate" ColumnName="SubmittedForApprovalDate" />
+          <ScalarProperty Name="QuestionnaireDeadline" ColumnName="QuestionnaireDeadline" />
+          <ScalarProperty Name="FeedbackRequired" ColumnName="FeedbackRequired" />
+          <ScalarProperty Name="AgreeElectronicSign" ColumnName="AgreeElectronicSign" />
+          <ScalarProperty Name="AgreeNoDeviation" ColumnName="AgreeNoDeviation" />
+          <ScalarProperty Name="AccurateStatementOfFact" ColumnName="AccurateStatementOfFact" />
+          <ScalarProperty Name="AuthorisedToSign" ColumnName="AuthorisedToSign" />
+          <ScalarProperty Name="DocumentUsedAsEvidence" ColumnName="DocumentUsedAsEvidence" />
+          <ScalarProperty Name="FDACompliance" ColumnName="FDACompliance" />
+          <ScalarProperty Name="UKEUStatutoryRequirement" ColumnName="UKEUStatutoryRequirement" />
+          <ScalarProperty Name="TrueRepresentationOfProduct" ColumnName="TrueRepresentationOfProduct" />
+          <ScalarProperty Name="ChangesMustBeNotified" ColumnName="ChangesMustBeNotified" />
+          <ScalarProperty Name="RecordsHeld1Year" ColumnName="RecordsHeld1Year" />
+          <ScalarProperty Name="IncidentNotifications" ColumnName="IncidentNotifications" />
+          <ScalarProperty Name="RecallNotifications" ColumnName="RecallNotifications" />
+          <ScalarProperty Name="WithdrawalNotifications" ColumnName="WithdrawalNotifications" />
+          <ScalarProperty Name="SupplierSignName" ColumnName="SupplierSignName" />
+          <ScalarProperty Name="SupplierSignPosition" ColumnName="SupplierSignPosition" />
+          <ScalarProperty Name="SupplierSignCompany" ColumnName="SupplierSignCompany" />
+          <ScalarProperty Name="SupplierSignDate" ColumnName="SupplierSignDate" />
+          <ScalarProperty Name="CustomerSignName" ColumnName="CustomerSignName" />
+          <ScalarProperty Name="CustomerSignPosition" ColumnName="CustomerSignPosition" />
+          <ScalarProperty Name="CustomerSignCompany" ColumnName="CustomerSignCompany" />
+          <ScalarProperty Name="CustomerSignDate" ColumnName="CustomerSignDate" />
+          <ScalarProperty Name="SupplierApprovedBy" ColumnName="SupplierApprovedBy" />
+          <ScalarProperty Name="SupplierApprovedTtitle" ColumnName="SupplierApprovedTtitle" />
+          <ScalarProperty Name="CustomerApprovedBy" ColumnName="CustomerApprovedBy" />
+          <ScalarProperty Name="CustomerAprovedTitle" ColumnName="CustomerAprovedTitle" />
+          <ScalarProperty Name="LatestIssueNo" ColumnName="LatestIssueNo" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="DocumentRef" ColumnName="DocumentRef" />
+          <ScalarProperty Name="FinalPDF" ColumnName="FinalPDF" />
+          <ScalarProperty Name="FinalPDFURL" ColumnName="FinalPDFURL" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="TransferToMfg" ColumnName="TransferToMfg" />
+          <ScalarProperty Name="SignInToken" ColumnName="SignInToken" />
+          <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+          <ScalarProperty Name="ApprovalCode" ColumnName="ApprovalCode" />
+          <ScalarProperty Name="AuditRatingID" ColumnName="AuditRatingID" />
+          <ScalarProperty Name="InDevelopment" ColumnName="InDevelopment" />
+          <ScalarProperty Name="UpdatedByUserID" ColumnName="UpdatedByUserID" />
+          <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+          <ScalarProperty Name="DefaultAccountManagerID" ColumnName="DefaultAccountManagerID" />
+          <ScalarProperty Name="AzureStorageURL" ColumnName="AzureStorageURL" />
+          <ScalarProperty Name="SupplierSignDigitalSignature" ColumnName="SupplierSignDigitalSignature" />
+          <ScalarProperty Name="CustomerSignDigitalSignature" ColumnName="CustomerSignDigitalSignature" />
+          <ScalarProperty Name="AgentSignDigitalSignature" ColumnName="AgentSignDigitalSignature" />
+          <ScalarProperty Name="IsFromWebsite" ColumnName="IsFromWebsite" />
+          <ScalarProperty Name="NutshellLeadID" ColumnName="NutshellLeadID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

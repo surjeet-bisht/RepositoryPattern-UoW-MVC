@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad54c0d739ea4890a5aad8cf152965d4" Name="Diagram1">
+        <EntityTypeShape EntityType="HACCPNowSQLDevModel.Manufacturer" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HACCPNowSQLDevModel.RawMaterial" Width="1.5" PointX="6.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HACCPNowSQLDevModel.RawMaterialManufacturer" Width="1.5" PointX="3" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HACCPNowSQLDevModel.RawMaterialSupplier" Width="1.5" PointX="9" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HACCPNowSQLDevModel.Supplier" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HACCPNowSQLDevModel.SupplierAssurance" Width="1.5" PointX="6" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HACCPNowSQLDevModel.SupplierDocument" Width="1.5" PointX="3" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HACCPNowSQLDevModel.SupplierQuestionnaire" Width="1.5" PointX="12" PointY="20.625" IsExpanded="true" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_RawMaterialManufacturer_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_SupplierAssurance_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_SupplierQuestionnaire_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_RawMaterialManufacturer_RawMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_RawMaterialSupplier_RawMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_RawMaterialSupplier_RawMaterial1" ManuallyRouted="false" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_SupplierQuestionnaire_RawMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_RawMaterialManufacturer_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_RawMaterialSupplier_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_SupplierAssurance_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_SupplierDocument_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="HACCPNowSQLDevModel.FK_SupplierQuestionnaire_Supplier" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

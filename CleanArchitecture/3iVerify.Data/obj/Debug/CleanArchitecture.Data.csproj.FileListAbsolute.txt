@@ -1,0 +1,10 @@
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Data\bin\Debug\3iVerify.Data.dll.config
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Data\bin\Debug\3iVerify.Data.dll
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Data\bin\Debug\3iVerify.Data.pdb
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Data\bin\Debug\EntityFramework.dll
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Data\bin\Debug\EntityFramework.xml
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Data\obj\Debug\CleanArchitecture.Data.csproj.AssemblyReference.cache
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Data\obj\Debug\CleanArchitecture.Data.csproj.CoreCompileInputs.cache
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Data\obj\Debug\CleanArchitecture.Data.csproj.CopyComplete
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Data\obj\Debug\3iVerify.Data.dll
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Data\obj\Debug\3iVerify.Data.pdb

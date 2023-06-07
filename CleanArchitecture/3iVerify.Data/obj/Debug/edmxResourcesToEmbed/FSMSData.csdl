@@ -1,0 +1,701 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HACCPNowSQLDevModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="ManufacturerID" />
+    </Key>
+    <Property Name="ManufacturerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GlobalCompanyID" Type="Int32" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="MSiteName" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="MAddress1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAddress2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAddress3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAddress4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAddress5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MCountryID" Type="Int32" />
+    <Property Name="MPostCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MTel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MFax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="MName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MContactEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IsChanged" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="RegistrationNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MSiteCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClientID" Type="Int32" />
+    <NavigationProperty Name="RawMaterialManufacturers" Relationship="Self.FK_RawMaterialManufacturer_Manufacturer" FromRole="Manufacturer" ToRole="RawMaterialManufacturer" />
+    <NavigationProperty Name="SupplierAssurances" Relationship="Self.FK_SupplierAssurance_Manufacturer" FromRole="Manufacturer" ToRole="SupplierAssurance" />
+    <NavigationProperty Name="SupplierQuestionnaires" Relationship="Self.FK_SupplierQuestionnaire_Manufacturer" FromRole="Manufacturer" ToRole="SupplierQuestionnaire" />
+  </EntityType>
+  <EntityType Name="RawMaterial">
+    <Key>
+      <PropertyRef Name="RawMaterialID" />
+    </Key>
+    <Property Name="RawMaterialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="RawMaterial1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Variety" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PackSize" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Packaging" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="LegalName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RawMaterialDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IngrDeclaration" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RawMaterialOrganicDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RawMaterialShelfLifeID" Type="Int32" />
+    <Property Name="RawMaterialSAPCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CommercialCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsReadyToEat" Type="Boolean" />
+    <Property Name="IsBulkProduct" Type="Boolean" />
+    <Property Name="SupplierProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierFDARegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateCodeFormat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BatchLotCodeDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShelfLifeDesignation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShelfLifeUnopened" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ShelfLifeOpened" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DistributionChain" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ManufacturerName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ManufacturerFDARegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FSVPExemptYesNoOnlyListID" Type="Int32" />
+    <Property Name="FSVPInPlaceYesNoListID" Type="Int32" />
+    <Property Name="FSVPDocumentName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOfOrigin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOfOriginID" Type="Int32" />
+    <Property Name="CountryOfTransit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOfTransitID" Type="Int32" />
+    <Property Name="CountryOfManufacture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOfManufactureID" Type="Int32" />
+    <Property Name="Approved" Type="Boolean" />
+    <Property Name="ApprovedDate" Type="DateTime" Precision="3" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApprovedUserID" Type="Int32" />
+    <Property Name="ApprovalBasis" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImportID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GTIN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="DocumentPath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RawMaterialDocument" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="InDevelopment" Type="Boolean" />
+    <Property Name="RawMaterialURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ServingsPerContainer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ServingSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FSVPDocumentFileNameID" Type="Int32" />
+    <Property Name="IsGlobal" Type="Boolean" />
+    <Property Name="KBFoodSubCategoryID" Type="Int32" />
+    <Property Name="RawMaterialTypeID" Type="Int32" />
+    <Property Name="IsWIP" Type="Boolean" />
+    <Property Name="IsPackaging" Type="Boolean" />
+    <Property Name="MethodOfProduction" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialUnitTypeID" Type="Int32" />
+    <Property Name="SpecificGravity" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="GS1FoodSubCategoryID" Type="Int32" />
+    <Property Name="RawMaterialRiskCategoryID" Type="Int32" />
+    <Property Name="MaterialUnitNetWtKg" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PlasticTaxGramsPerKg" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="RawMaterialManufacturers" Relationship="Self.FK_RawMaterialManufacturer_RawMaterial" FromRole="RawMaterial" ToRole="RawMaterialManufacturer" />
+    <NavigationProperty Name="RawMaterialSuppliers" Relationship="Self.FK_RawMaterialSupplier_RawMaterial" FromRole="RawMaterial" ToRole="RawMaterialSupplier" />
+    <NavigationProperty Name="RawMaterialSuppliers1" Relationship="Self.FK_RawMaterialSupplier_RawMaterial1" FromRole="RawMaterial" ToRole="RawMaterialSupplier" />
+    <NavigationProperty Name="SupplierQuestionnaires" Relationship="Self.FK_SupplierQuestionnaire_RawMaterial" FromRole="RawMaterial" ToRole="SupplierQuestionnaire" />
+  </EntityType>
+  <EntityType Name="RawMaterialManufacturer">
+    <Key>
+      <PropertyRef Name="RawMaterialManufacturerID" />
+    </Key>
+    <Property Name="RawMaterialManufacturerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RawMaterialID" Type="Int32" />
+    <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+    <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsSelectedForSupplier" Type="Boolean" />
+    <Property Name="SupplierId" Type="Int32" />
+    <Property Name="ApprovalStatusID" Type="Int32" />
+    <NavigationProperty Name="Manufacturer" Relationship="Self.FK_RawMaterialManufacturer_Manufacturer" FromRole="RawMaterialManufacturer" ToRole="Manufacturer" />
+    <NavigationProperty Name="RawMaterial" Relationship="Self.FK_RawMaterialManufacturer_RawMaterial" FromRole="RawMaterialManufacturer" ToRole="RawMaterial" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_RawMaterialManufacturer_Supplier" FromRole="RawMaterialManufacturer" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="RawMaterialSupplier">
+    <Key>
+      <PropertyRef Name="RawMaterialSupplierID" />
+    </Key>
+    <Property Name="RawMaterialSupplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RawMaterialID" Type="Int32" Nullable="false" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="RawMaterial" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Variety" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PackSize" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Packaging" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LegalName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RawMaterialDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IngrDeclaration" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RawMaterialOrganicDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RawMaterialShelfLifeID" Type="Int32" />
+    <Property Name="RawMaterialSAPCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RawMaterialUnitCost" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="CommercialCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsReadyToEat" Type="Boolean" />
+    <Property Name="IsBulkProduct" Type="Boolean" />
+    <Property Name="SupplierProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierFDARegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ManufacturerName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ManufacturerFDARegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateCodeFormat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BatchLotCodeDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShelfLifeDesignation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShelfLifeUnopened" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ShelfLifeOpened" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DistributionChain" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FSVPExemptYesNoOnlyListID" Type="Int32" />
+    <Property Name="FSVPInPlaceYesNoListID" Type="Int32" />
+    <Property Name="FSVPDocumentName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOfOrigin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOfOriginID" Type="Int32" />
+    <Property Name="CountryOfTransit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOfTransitID" Type="Int32" />
+    <Property Name="CountryOfManufacture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOfManufactureID" Type="Int32" />
+    <Property Name="IsAutoQuestionnaire" Type="Boolean" />
+    <Property Name="QuestionnaireID" Type="Int32" />
+    <Property Name="SupplierQuestionnaireID" Type="Int32" />
+    <Property Name="Approved" Type="Boolean" />
+    <Property Name="ApprovedDate" Type="DateTime" Precision="3" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApprovedUserID" Type="Int32" />
+    <Property Name="ApprovalBasis" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="DocumentPath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RawMaterialDocument" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ApprovalStatusID" Type="Int32" />
+    <Property Name="ServingsPerContainer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ServingSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FSVPDocumentFileNameID" Type="Int32" />
+    <Property Name="RawMaterialTypeID" Type="Int32" />
+    <Property Name="GTIN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MethodOfProduction" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierRawMaterialName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="LinkedRawMaterialListID" Type="Int32" />
+    <Property Name="VatRateID" Type="Int32" />
+    <Property Name="LeadTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MakeUpInstruction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialUnitNetWtKg" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PlasticTaxGramsPerKg" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="RawMaterial1" Relationship="Self.FK_RawMaterialSupplier_RawMaterial" FromRole="RawMaterialSupplier" ToRole="RawMaterial" />
+    <NavigationProperty Name="RawMaterial2" Relationship="Self.FK_RawMaterialSupplier_RawMaterial1" FromRole="RawMaterialSupplier" ToRole="RawMaterial" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_RawMaterialSupplier_Supplier" FromRole="RawMaterialSupplier" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Supplier1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SupplierRef" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierTypeID" Type="Int32" />
+    <Property Name="SupplierGroupID" Type="Int32" />
+    <Property Name="SiteName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddressOptional" Type="Boolean" Nullable="false" />
+    <Property Name="Address1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CountryID" Type="Int32" />
+    <Property Name="PostCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WebSiteURL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MSiteName" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="MAddress1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAddress2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAddress3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAddress4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAddress5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MCountryID" Type="Int32" />
+    <Property Name="MPostCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MTel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MFax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyProfile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainContact" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MainContactJobTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MainContactEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MainContactTel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TechContact" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TechContactJobTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TechContactEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TechContactTel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TechContactPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SendChaserEmails" Type="Boolean" />
+    <Property Name="AccountManagerUserID" Type="Int32" />
+    <Property Name="EmergencyContactName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmergencyContactJobTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmergencyContactEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmergencyContactTel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AutoQuestionnaire" Type="Boolean" />
+    <Property Name="MonitoringFormID" Type="Int32" />
+    <Property Name="SedexNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IsSMETAAudit" Type="Boolean" />
+    <Property Name="SMETAPillar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HealthMarkNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LiabilityPerOccurence" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LiabilityPersonalInjury" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LiabilityGeneralAggregate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LiabilityProductsAggregate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LiabilityAuto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LiabilityMotorTruck" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LiabilityExcessUmbrella" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LiabilityEmployers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StatutoryWorkersCompensation" Type="Boolean" Nullable="false" />
+    <Property Name="CertifyAdditionalInsured" Type="Boolean" Nullable="false" />
+    <Property Name="Turnover" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ManufacturingCapacity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NoFTEmployees" Type="Int32" />
+    <Property Name="NoPTEmployees" Type="Int32" />
+    <Property Name="PremisesSize" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="YearOfConstruction" Type="Int32" />
+    <Property Name="YearEstablished" Type="Int32" />
+    <Property Name="NameOfParentCo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="NoProductsManufactured" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NoExportShipmentsPerYear" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AnnualExportValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DescriptionOfProducts" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsGFSICertificatedYesNoOnlyListID" Type="Int32" />
+    <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="ImportID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="IsCCToCommerial" Type="Boolean" />
+    <Property Name="DunsNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsOptional" Type="Boolean" />
+    <Property Name="GFBIHashID" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="InDevelopment" Type="Boolean" />
+    <Property Name="IsGlobal" Type="Boolean" />
+    <Property Name="ApprovalStatusID" Type="Int32" />
+    <Property Name="GlobalSupplierID" Type="Int32" />
+    <Property Name="IsSeparateRemittance" Type="Boolean" Nullable="false" />
+    <Property Name="RemitAddress1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RemitAddress2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RemitAddress3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RemitAddress4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RemitAddress5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RemitCountryID" Type="Int32" />
+    <Property Name="RemitPostCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AccountsContactName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AccountsTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AccountsEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AccountsFax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AccountsTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FoodSafetyContactName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FoodSafetyTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FoodSafetyEMail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FoodSafetyAltEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FoodSafetyTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentationURL" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IsFoodSafetyTheRecallContact" Type="Boolean" Nullable="false" />
+    <Property Name="RecallContactName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RecallTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RecallEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RecallOfficeNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecallMobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecallFaxNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USDARegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsFDARegistered" Type="Boolean" Nullable="false" />
+    <Property Name="FDARegDate" Type="DateTime" Precision="3" />
+    <Property Name="FDARegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="USAgentName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="USAgentAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="USTarriffNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TaxIDNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PACARegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DRCRegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsUSDARegistered" Type="Boolean" Nullable="false" />
+    <Property Name="SupplierSapCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierPassword" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierPasswordSalt" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FDALoginUserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FDALoginPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FDALoginPIN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GPSCoordinates" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OtherCertification" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProductClaims" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="InsurerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShiftPatterns" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsOnSiteStorageYesNoOnlyListID" Type="Int32" />
+    <Property Name="IsOffsiteStorageYesNoOnlyListID" Type="Int32" />
+    <Property Name="DistributionDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NoTempEmployees" Type="Int32" />
+    <Property Name="NoEngEmployees" Type="Int32" />
+    <Property Name="NoQualEmployees" Type="Int32" />
+    <Property Name="NoTechEmployees" Type="Int32" />
+    <NavigationProperty Name="RawMaterialManufacturers" Relationship="Self.FK_RawMaterialManufacturer_Supplier" FromRole="Supplier" ToRole="RawMaterialManufacturer" />
+    <NavigationProperty Name="RawMaterialSuppliers" Relationship="Self.FK_RawMaterialSupplier_Supplier" FromRole="Supplier" ToRole="RawMaterialSupplier" />
+    <NavigationProperty Name="SupplierAssurances" Relationship="Self.FK_SupplierAssurance_Supplier" FromRole="Supplier" ToRole="SupplierAssurance" />
+    <NavigationProperty Name="SupplierDocuments" Relationship="Self.FK_SupplierDocument_Supplier" FromRole="Supplier" ToRole="SupplierDocument" />
+    <NavigationProperty Name="SupplierQuestionnaires" Relationship="Self.FK_SupplierQuestionnaire_Supplier" FromRole="Supplier" ToRole="SupplierQuestionnaire" />
+  </EntityType>
+  <EntityType Name="SupplierAssurance">
+    <Key>
+      <PropertyRef Name="SupplierAssuranceID" />
+    </Key>
+    <Property Name="SupplierAssuranceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="AssuranceSchemeID" Type="Int32" Nullable="false" />
+    <Property Name="SchemeName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DateChecked" Type="DateTime" Precision="3" />
+    <Property Name="LastAudit" Type="DateTime" Precision="3" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+    <Property Name="Deadline" Type="DateTime" Precision="3" />
+    <Property Name="GradeAchieved" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CheckByUserID" Type="Int32" />
+    <Property Name="AssuranceNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CertFileName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IsAutoAssure" Type="Boolean" Nullable="false" />
+    <Property Name="SiteCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AutoReminder" Type="Boolean" />
+    <Property Name="DateReceived" Type="DateTime" Precision="3" />
+    <Property Name="DateSent" Type="DateTime" Precision="3" />
+    <Property Name="DateUploaded" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="IsLatest" Type="Boolean" />
+    <Property Name="TransferToMfg" Type="Boolean" />
+    <Property Name="SignInToken" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="TransferDate" Type="DateTime" Precision="3" />
+    <Property Name="ManufacturerID" Type="Int32" />
+    <Property Name="ApprovalCode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="AutoRenewalSent" Type="Boolean" />
+    <Property Name="AzureStorageURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CCList" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierCertificationDocumentID" Type="Int32" />
+    <Property Name="SupplierQuestionnaireID" Type="Int32" />
+    <Property Name="RawMaterialID" Type="Int32" />
+    <Property Name="IsUploadComplete" Type="Boolean" />
+    <Property Name="ParentSupplierAssuranceID" Type="Int32" />
+    <NavigationProperty Name="Manufacturer" Relationship="Self.FK_SupplierAssurance_Manufacturer" FromRole="SupplierAssurance" ToRole="Manufacturer" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_SupplierAssurance_Supplier" FromRole="SupplierAssurance" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="SupplierDocument">
+    <Key>
+      <PropertyRef Name="SupplierDocumentID" />
+    </Key>
+    <Property Name="SupplierDocumentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="SupplierDocumentTypeID" Type="Int32" />
+    <Property Name="DocumentShortName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tags" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateUploaded" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UploadedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+    <Property Name="InDevelopment" Type="Boolean" />
+    <Property Name="ManufacturerID" Type="Int32" />
+    <Property Name="RawMaterialID" Type="Int32" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="AzureStorageURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="IsArchived" Type="Boolean" />
+    <Property Name="ArchivedReason" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ArchivedDate" Type="DateTime" Precision="3" />
+    <Property Name="ArchivedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsNoExpiry" Type="Boolean" />
+    <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="ExpiredDocumentID" Type="Int32" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_SupplierDocument_Supplier" FromRole="SupplierDocument" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="SupplierQuestionnaire">
+    <Key>
+      <PropertyRef Name="SupplierQuestionnaireID" />
+    </Key>
+    <Property Name="SupplierQuestionnaireID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuestionnaireID" Type="Int32" Nullable="false" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="RawMaterialID" Type="Int32" />
+    <Property Name="ManufacturerID" Type="Int32" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="DateSupplierSent" Type="DateTime" Precision="3" />
+    <Property Name="DateSupplierReceived" Type="DateTime" Precision="3" />
+    <Property Name="DateSupplierApproved" Type="DateTime" Precision="3" />
+    <Property Name="SubmittedForApproval" Type="Boolean" Nullable="false" />
+    <Property Name="SubmittedForApprovalDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="QuestionnaireDeadline" Type="DateTime" Precision="3" />
+    <Property Name="FeedbackRequired" Type="Boolean" Nullable="false" />
+    <Property Name="AgreeElectronicSign" Type="Boolean" />
+    <Property Name="AgreeNoDeviation" Type="Boolean" />
+    <Property Name="AccurateStatementOfFact" Type="Boolean" />
+    <Property Name="AuthorisedToSign" Type="Boolean" />
+    <Property Name="DocumentUsedAsEvidence" Type="Boolean" />
+    <Property Name="FDACompliance" Type="Boolean" />
+    <Property Name="UKEUStatutoryRequirement" Type="Boolean" />
+    <Property Name="TrueRepresentationOfProduct" Type="Boolean" />
+    <Property Name="ChangesMustBeNotified" Type="Boolean" />
+    <Property Name="RecordsHeld1Year" Type="Boolean" />
+    <Property Name="IncidentNotifications" Type="Boolean" />
+    <Property Name="RecallNotifications" Type="Boolean" />
+    <Property Name="WithdrawalNotifications" Type="Boolean" />
+    <Property Name="SupplierSignName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierSignPosition" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierSignCompany" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierSignDate" Type="DateTime" Precision="3" />
+    <Property Name="CustomerSignName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerSignPosition" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerSignCompany" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerSignDate" Type="DateTime" Precision="3" />
+    <Property Name="SupplierApprovedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierApprovedTtitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerApprovedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerAprovedTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LatestIssueNo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="IssueDate" Type="DateTime" Precision="3" />
+    <Property Name="DocumentRef" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FinalPDF" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FinalPDFURL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsArchived" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="TransferToMfg" Type="Boolean" />
+    <Property Name="SignInToken" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="TransferDate" Type="DateTime" Precision="3" />
+    <Property Name="ApprovalCode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="AuditRatingID" Type="Int32" />
+    <Property Name="InDevelopment" Type="Boolean" />
+    <Property Name="UpdatedByUserID" Type="Int32" />
+    <Property Name="CreatedByUserID" Type="Int32" />
+    <Property Name="DefaultAccountManagerID" Type="Int32" />
+    <Property Name="AzureStorageURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierSignDigitalSignature" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerSignDigitalSignature" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="AgentSignDigitalSignature" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="IsFromWebsite" Type="Boolean" />
+    <Property Name="NutshellLeadID" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Manufacturer" Relationship="Self.FK_SupplierQuestionnaire_Manufacturer" FromRole="SupplierQuestionnaire" ToRole="Manufacturer" />
+    <NavigationProperty Name="RawMaterial" Relationship="Self.FK_SupplierQuestionnaire_RawMaterial" FromRole="SupplierQuestionnaire" ToRole="RawMaterial" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_SupplierQuestionnaire_Supplier" FromRole="SupplierQuestionnaire" ToRole="Supplier" />
+  </EntityType>
+  <Association Name="FK_RawMaterialManufacturer_Manufacturer">
+    <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="1" />
+    <End Role="RawMaterialManufacturer" Type="Self.RawMaterialManufacturer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="ManufacturerID" />
+      </Principal>
+      <Dependent Role="RawMaterialManufacturer">
+        <PropertyRef Name="ManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierAssurance_Manufacturer">
+    <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="0..1" />
+    <End Role="SupplierAssurance" Type="Self.SupplierAssurance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="ManufacturerID" />
+      </Principal>
+      <Dependent Role="SupplierAssurance">
+        <PropertyRef Name="ManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierQuestionnaire_Manufacturer">
+    <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="0..1" />
+    <End Role="SupplierQuestionnaire" Type="Self.SupplierQuestionnaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="ManufacturerID" />
+      </Principal>
+      <Dependent Role="SupplierQuestionnaire">
+        <PropertyRef Name="ManufacturerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RawMaterialManufacturer_RawMaterial">
+    <End Role="RawMaterial" Type="Self.RawMaterial" Multiplicity="0..1" />
+    <End Role="RawMaterialManufacturer" Type="Self.RawMaterialManufacturer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RawMaterial">
+        <PropertyRef Name="RawMaterialID" />
+      </Principal>
+      <Dependent Role="RawMaterialManufacturer">
+        <PropertyRef Name="RawMaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RawMaterialSupplier_RawMaterial">
+    <End Role="RawMaterial" Type="Self.RawMaterial" Multiplicity="1" />
+    <End Role="RawMaterialSupplier" Type="Self.RawMaterialSupplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RawMaterial">
+        <PropertyRef Name="RawMaterialID" />
+      </Principal>
+      <Dependent Role="RawMaterialSupplier">
+        <PropertyRef Name="RawMaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RawMaterialSupplier_RawMaterial1">
+    <End Role="RawMaterial" Type="Self.RawMaterial" Multiplicity="0..1" />
+    <End Role="RawMaterialSupplier" Type="Self.RawMaterialSupplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RawMaterial">
+        <PropertyRef Name="RawMaterialID" />
+      </Principal>
+      <Dependent Role="RawMaterialSupplier">
+        <PropertyRef Name="LinkedRawMaterialListID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierQuestionnaire_RawMaterial">
+    <End Role="RawMaterial" Type="Self.RawMaterial" Multiplicity="0..1" />
+    <End Role="SupplierQuestionnaire" Type="Self.SupplierQuestionnaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RawMaterial">
+        <PropertyRef Name="RawMaterialID" />
+      </Principal>
+      <Dependent Role="SupplierQuestionnaire">
+        <PropertyRef Name="RawMaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RawMaterialManufacturer_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="RawMaterialManufacturer" Type="Self.RawMaterialManufacturer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="RawMaterialManufacturer">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RawMaterialSupplier_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="RawMaterialSupplier" Type="Self.RawMaterialSupplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="RawMaterialSupplier">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierAssurance_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SupplierAssurance" Type="Self.SupplierAssurance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="SupplierAssurance">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierDocument_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="SupplierDocument" Type="Self.SupplierDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="SupplierDocument">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierQuestionnaire_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="SupplierQuestionnaire" Type="Self.SupplierQuestionnaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="SupplierQuestionnaire">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HACCPNowSQLDevEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Manufacturers" EntityType="Self.Manufacturer" />
+    <EntitySet Name="RawMaterials" EntityType="Self.RawMaterial" />
+    <EntitySet Name="RawMaterialManufacturers" EntityType="Self.RawMaterialManufacturer" />
+    <EntitySet Name="RawMaterialSuppliers" EntityType="Self.RawMaterialSupplier" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <EntitySet Name="SupplierAssurances" EntityType="Self.SupplierAssurance" />
+    <EntitySet Name="SupplierDocuments" EntityType="Self.SupplierDocument" />
+    <EntitySet Name="SupplierQuestionnaires" EntityType="Self.SupplierQuestionnaire" />
+    <AssociationSet Name="FK_RawMaterialManufacturer_Manufacturer" Association="Self.FK_RawMaterialManufacturer_Manufacturer">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="RawMaterialManufacturer" EntitySet="RawMaterialManufacturers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierAssurance_Manufacturer" Association="Self.FK_SupplierAssurance_Manufacturer">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="SupplierAssurance" EntitySet="SupplierAssurances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierQuestionnaire_Manufacturer" Association="Self.FK_SupplierQuestionnaire_Manufacturer">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="SupplierQuestionnaire" EntitySet="SupplierQuestionnaires" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RawMaterialManufacturer_RawMaterial" Association="Self.FK_RawMaterialManufacturer_RawMaterial">
+      <End Role="RawMaterial" EntitySet="RawMaterials" />
+      <End Role="RawMaterialManufacturer" EntitySet="RawMaterialManufacturers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RawMaterialSupplier_RawMaterial" Association="Self.FK_RawMaterialSupplier_RawMaterial">
+      <End Role="RawMaterial" EntitySet="RawMaterials" />
+      <End Role="RawMaterialSupplier" EntitySet="RawMaterialSuppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RawMaterialSupplier_RawMaterial1" Association="Self.FK_RawMaterialSupplier_RawMaterial1">
+      <End Role="RawMaterial" EntitySet="RawMaterials" />
+      <End Role="RawMaterialSupplier" EntitySet="RawMaterialSuppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierQuestionnaire_RawMaterial" Association="Self.FK_SupplierQuestionnaire_RawMaterial">
+      <End Role="RawMaterial" EntitySet="RawMaterials" />
+      <End Role="SupplierQuestionnaire" EntitySet="SupplierQuestionnaires" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RawMaterialManufacturer_Supplier" Association="Self.FK_RawMaterialManufacturer_Supplier">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="RawMaterialManufacturer" EntitySet="RawMaterialManufacturers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RawMaterialSupplier_Supplier" Association="Self.FK_RawMaterialSupplier_Supplier">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="RawMaterialSupplier" EntitySet="RawMaterialSuppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierAssurance_Supplier" Association="Self.FK_SupplierAssurance_Supplier">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="SupplierAssurance" EntitySet="SupplierAssurances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierDocument_Supplier" Association="Self.FK_SupplierDocument_Supplier">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="SupplierDocument" EntitySet="SupplierDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierQuestionnaire_Supplier" Association="Self.FK_SupplierQuestionnaire_Supplier">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="SupplierQuestionnaire" EntitySet="SupplierQuestionnaires" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

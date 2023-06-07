@@ -1,0 +1,13 @@
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\bin\Debug\3iVerify.Core.dll.config
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\bin\Debug\3iVerify.Core.dll
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\bin\Debug\3iVerify.Core.pdb
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\bin\Debug\3iVerify.Data.dll
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\bin\Debug\EntityFramework.dll
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\bin\Debug\3iVerify.Data.pdb
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\bin\Debug\3iVerify.Data.dll.config
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\bin\Debug\EntityFramework.xml
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\obj\Debug\3iVerify.Core.csproj.AssemblyReference.cache
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\obj\Debug\3iVerify.Core.csproj.CoreCompileInputs.cache
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\obj\Debug\3iVerify.Core.csproj.CopyComplete
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\obj\Debug\3iVerify.Core.dll
+C:\Users\bisht\Documents\Projects\Research\CleanArchitecture\3iVerify.Core\obj\Debug\3iVerify.Core.pdb
